@@ -33,7 +33,7 @@ export async function launchCube() {
     locateFile: (path: string) => {
       if (path.endsWith('.data'))
         return '/wasm/' + path;
-      return '/src/wasm/cub3D/' + path;
+      return '/assets/' + path;
     },
     print: (text: string) => { console.log('[Cub3d]:', text);},
     printErr: (text: string) => { console.error('[cub3d Error]:', text);},
