@@ -31,9 +31,7 @@ export async function launchCube() {
     arguments: ['textures/map.cub'],
     canvas: document.getElementById("canvas"),
     locateFile: (path: string) => {
-      if (path.endsWith('.data'))
-        return '/wasm/' + path;
-      return '/assets/' + path;
+      return '/wasm/' + path;
     },
     print: (text: string) => { console.log('[Cub3d]:', text);},
     printErr: (text: string) => { console.error('[cub3d Error]:', text);},
